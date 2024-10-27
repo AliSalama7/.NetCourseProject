@@ -29,7 +29,6 @@ namespace project1.Controllers
             return Ok(cartItems);
         }
 
-
         [HttpPost]
         public async Task<IActionResult> PostCartItem([FromQuery] int productId, [FromQuery] int userId)
         {
