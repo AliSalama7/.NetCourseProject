@@ -314,9 +314,9 @@
   },
   {
     "ContainingType": "project1.Controllers.ProductController",
-    "Method": "UpdatePrice",
+    "Method": "Delete",
     "RelativePath": "api/Product",
-    "HttpMethod": "PUT",
+    "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
     "Parameters": [
@@ -324,6 +324,22 @@
         "Name": "id",
         "Type": "System.Int32",
         "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "project1.Controllers.ProductController",
+    "Method": "UpdatePrice",
+    "RelativePath": "api/Product/{id}",
+    "HttpMethod": "PATCH",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
       },
       {
         "Name": "newPrice",
@@ -342,22 +358,6 @@
         "StatusCode": 200
       }
     ]
-  },
-  {
-    "ContainingType": "project1.Controllers.ProductController",
-    "Method": "Delete",
-    "RelativePath": "api/Product",
-    "HttpMethod": "DELETE",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Int32",
-        "IsRequired": false
-      }
-    ],
-    "ReturnTypes": []
   },
   {
     "ContainingType": "project1.Controllers.UsersController",

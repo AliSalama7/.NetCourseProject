@@ -61,7 +61,7 @@ namespace project1.Controllers
             _db.SaveChanges();
             return Ok(item);
         }
-        [HttpPut]
+        [HttpPatch("{id}")]
         public ActionResult<ProductDto> UpdatePrice(int id,decimal newPrice) 
         {
             var product = _db.Products.Include(p => p.Category).Include(p => p.Brand).FirstOrDefault(p=>p.Id == id);
