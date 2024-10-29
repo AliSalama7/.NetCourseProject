@@ -18,7 +18,10 @@ namespace project1.Controllers
         [HttpGet]
         public async Task<ActionResult<List<Order>>> Get()
         {
-            return await _context.Orders.ToListAsync();
+            return await _context.Orders
+                .Include(o => o.User)
+                .Include(o => o.ShippingAddress)
+                .Include(o => o.Payment).ToListAsync();
         }
 
         [HttpGet("{id}")]
